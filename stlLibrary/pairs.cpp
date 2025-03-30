@@ -53,6 +53,7 @@ void explaining_vectors(){
         cout << val2 << "is the vector 2";
 }
 void explain_list(){
+    
     list<int> ls;
     ls.emplace_back(1);
     ls.emplace_front(2);
@@ -63,11 +64,16 @@ void explain_list(){
     }
     
 }
+void explain_deque(){
+    deque<int> dq;
+    dq.push_back(5);
+}
 int main()
 {
     // understandingpair();
     // explaining_vectors();
-    explain_list();
+    // explain_list();
+    explain_deque();
 
     return 0;
 }
