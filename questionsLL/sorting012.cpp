@@ -27,6 +27,7 @@ void printll(node*head){
     while(temp){
         cout << temp->val<<"->";
         temp = temp->next;
+        
     }
     cout << "null";
 }
