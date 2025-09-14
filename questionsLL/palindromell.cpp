@@ -30,31 +30,33 @@ void printLL(node*head){
     }
     cout << "null";
 }
-node*revl(node*head){
-    node *temp = head;
-    node *prev = nullptr;
-    while(temp){
-        node *front = temp->next;
-        temp->next = prev;
-        prev = temp;
-        temp = front;
+bool palin(node*head){
+    if(head==NULL){
+        return head;
     }
-    return prev;
+    node *temp = head; 
+    stack<int> st;
+   while(temp){
+      
+       st.push(temp->data);
+       temp = temp->next;
+   }
+   temp = head;
+   while(temp){
+    if(temp->data!=st.top()){
+        return false;
+    }
+    st.pop();
+    temp = temp->next;
+   }
+   return true;
 }
 
 int main(){
-    vector<int> arr = {
-        2,
-        3,
-        5,
-        6,
-        7,
-        8,
-        9,
-    };
+    vector<int> arr = { 2,3,5,3,2};
 node*head=makeLL(arr);
 printLL(head);
 cout << endl;
-node *revListLL=revl(head);
-printLL(revListLL);
+bool palindromecheck=palin(head);
+cout<<palindromecheck;
 }

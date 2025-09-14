@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 struct node{
     int data;
@@ -12,7 +12,7 @@ struct node{
         next = nullptr;
     }
 };
-node*makeLL(vector<int>arr){
+node* makell(vector<int>arr){
     node *head = new node(arr[0]);
     node *mover = head;
     for (int i = 1; i < arr.size();i++){
@@ -22,39 +22,33 @@ node*makeLL(vector<int>arr){
     }
     return head;
 }
-void printLL(node*head){
+void printll(node*head){
     node *temp = head;
     while(temp){
-        cout << temp->data << "->";
+        cout << temp->data<<"->";
         temp = temp->next;
     }
     cout << "null";
 }
-node*revl(node*head){
+node*middle(node*head){
+    int count = 0;
     node *temp = head;
-    node *prev = nullptr;
     while(temp){
-        node *front = temp->next;
-        temp->next = prev;
-        prev = temp;
-        temp = front;
+        count++;
+        temp = temp->next;
     }
-    return prev;
+    int mid = (count / 2) + 1;
+    temp = head;
+  for (int i = 1; i < mid; i++) {
+        temp = temp->next;
+    }
+    return temp;
 }
-
 int main(){
-    vector<int> arr = {
-        2,
-        3,
-        5,
-        6,
-        7,
-        8,
-        9,
-    };
-node*head=makeLL(arr);
-printLL(head);
-cout << endl;
-node *revListLL=revl(head);
-printLL(revListLL);
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
+   node*head= makell(arr);
+   printll(head);
+   node *md = middle(head);
+   cout << md->data;
+   return 0;
 }
