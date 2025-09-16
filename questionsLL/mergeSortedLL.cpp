@@ -52,6 +52,7 @@ node* mergetwoll(node*head1,node*head2){
         }
         else{
             mover->next = temp2;
+            
         }
     return dummyNode->next;
 }
