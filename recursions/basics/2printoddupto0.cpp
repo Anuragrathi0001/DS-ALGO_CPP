@@ -1,14 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 void greetBday(int dayLeft){
-    if(dayLeft<0){
+    if(dayLeft<1){
         return;
     }
-    cout << dayLeft << " days left in Bday";
-    cout << endl;
+    if(dayLeft%2==0){
+        cout << dayLeft;
+        cout << endl;
+    }
     greetBday(dayLeft - 1);
 }
 int main(){
-    greetBday(5);
+    greetBday(10);
     return 0;
 }
