@@ -1,0 +1,1 @@
+ return perfectsum(arr, index + 1, sum, 5) + perfectsum(arr, index + 1, sum - arr[index], 5);
