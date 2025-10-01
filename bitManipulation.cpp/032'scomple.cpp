@@ -24,6 +24,8 @@ string Zcomplement(string num){
           ans.push_back('1');
       }
       }      
+
+      
     }
     reverse(ans.begin(), ans.end());
     return ans;
