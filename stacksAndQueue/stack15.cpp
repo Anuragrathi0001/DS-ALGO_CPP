@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> nxtgreater2(vector<int>arr){
-    vector<int> ans;
+    vector<int> ans(arr.size(),-1);
     stack<int> st;
     for (int i = 2 * arr.size() - 1; i >= 0;i--){
         while(!st.empty()&&st.top()<=arr[i%arr.size()]){
@@ -12,13 +12,13 @@ vector<int> nxtgreater2(vector<int>arr){
         }
         st.push(arr[i % arr.size()]);
     }
-    return ans;
+    return ans; 
 }
 int main(){
     vector<int>arr = {2, 10, 12, 1, 11};
     vector<int>ans=  nxtgreater2(arr);
         for(auto it:ans){
-            cout << it;
+            cout << it <<" ";
                         }
     return 0;
 }
