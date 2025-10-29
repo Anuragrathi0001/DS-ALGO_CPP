@@ -6,7 +6,7 @@ int sumSubarrMin(vector<int>arr){
         int mini = arr[i];
         for (int j = i; j < arr.size();j++)
         {
-            mini = min(arr[i], mini);
+            mini = min(arr[j], mini);
             sum = sum + mini;
         }
     }
