@@ -33,5 +33,6 @@ string retsmallest(string str, int k){
 int main(){
     string str = "1432219";
   cout<<  retsmallest(str,3);
+  
     return 0;
 }
