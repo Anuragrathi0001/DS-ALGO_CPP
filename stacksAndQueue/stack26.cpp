@@ -42,5 +42,6 @@ int main(){
     };
 
     cout << maxarea(matrix, 4, 5);
+    
     return 0;
 }
