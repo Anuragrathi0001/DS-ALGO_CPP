@@ -12,15 +12,12 @@ vector<int> maxslide(vector<int> arr, int k) {
             dq.pop_back();
         }
 
-        // Push current index
         dq.push_back(i);
 
-        // Remove elements out of window
         if (dq.front() <= i - k) {
             dq.pop_front();
         }
 
-        // Store answer when window hits size k
         if (i >= k - 1) {
             ans.push_back(arr[dq.front()]);
         }
