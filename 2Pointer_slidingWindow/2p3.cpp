@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-//largest size of subarr with sum<=k
 using namespace std;
 int sizeofsubarr(vector<int>arr,int k){
     int maxlen = 0;
