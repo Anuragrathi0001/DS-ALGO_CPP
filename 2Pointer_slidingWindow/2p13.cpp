@@ -9,15 +9,10 @@ int longStringWithkdistinct(string str, int k){
         mpp.clear();
         for(int j = i; j < str.length(); j++){
 
-            // add current character
             mpp[str[j]]++;
-
-            // if distinct characters exceed k, break
             if(mpp.size() > k){
                 break;
             }
-
-            // if distinct characters <= k, update answer
             maxlen = max(maxlen, j - i + 1);
         }
     }
