@@ -16,6 +16,7 @@ int findcountsubstrcontainningthreecharacters(string str){
 }
 int main(){
     string str = "bbacba";
+    
      cout<<findcountsubstrcontainningthreecharacters(str);
     return 0;
 }
