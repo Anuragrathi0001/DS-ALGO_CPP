@@ -15,7 +15,8 @@ int longStringWithkdistinct(string str, int k){
             }
             maxlen = max(maxlen, j - i + 1);
         }
-    }
+    } 
+    
     return maxlen;
 }
 
