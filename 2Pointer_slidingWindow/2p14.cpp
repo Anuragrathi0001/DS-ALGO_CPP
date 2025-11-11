@@ -6,10 +6,10 @@ int maxlenSubstrwkstuff(string str,int k){
     for (int r = 0; r < str.length();r++){ 
         mpp[str[r]]++;
         while(mpp.size()>k){
-            mpp[str[l]]--; l++;
+            mpp[str[l]]--;
             if((mpp[str[l]])==0){ 
                 mpp.erase(str[l]);
-            }
+            } l++;
         }
         if(mpp.size()<=k){
             maxlen = max(maxlen, r- l + 1);
