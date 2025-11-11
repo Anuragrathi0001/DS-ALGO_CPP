@@ -7,14 +7,16 @@ int findnumstrwthreechars(string str){
     { switch(str[i]){
         case 'a':
             a = i;
+            break;
         case 'b':
             b = i;
+            break;
         case 'c':
             c = i;
+            break;
     }
         if(a!=-1&&b!=-1&&c!=-1){
-            int fs = (a < b && a < c) ? a : (b < a && b < c) ? b:c;
-            int ls = (a > b && a > c) ? a : (b > a && b > c) ? b:c;
+            int fs = min(a, min(b, c));
             count = count + fs + 1;
         }
     }
