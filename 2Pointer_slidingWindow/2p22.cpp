@@ -7,29 +7,19 @@ string miniwindowsubs(string str, string k) {
     int count = 0; 
     int minlen = INT_MAX;
     int startidx = -1;
-
-    // store frequency of each character in k
     for (int i = 0; i < m; i++) {
         hash[k[i]]++;
     }
-
     while (r < n) {
-        // if character needed, decrease count
         if (hash[str[r]] > 0)
             count++;
-
-        // decrease the freq of current char
         hash[str[r]]--;
         r++;
-
-        // when we have all chars in the window
         while (count == m) {
             if (r - l < minlen) {
                 minlen = r - l;
                 startidx = l;
             }
-
-            // restore char at left
             hash[str[l]]++;
             if (hash[str[l]] > 0)
                 count--;
