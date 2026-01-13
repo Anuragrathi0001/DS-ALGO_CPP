@@ -3,10 +3,11 @@ using namespace std;
 int jumpbitch(vector<int>arr){
   int maxidx = 0;
     for (int i = 0; i < arr.size();i++){
-        int   idx = arr[i] + i;
-        maxidx = max(maxidx, idx);
-        if(arr[maxidx]==0){
+        if(i>maxidx){
             return false;
+        }
+        if(maxidx>arr.size()){
+            return true;
         }
     }
     return true;
