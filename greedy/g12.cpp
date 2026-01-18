@@ -5,7 +5,7 @@ int maxtracks(vector<int>arr,vector<int>dep){
     sort(dep.begin(), dep.end());
     int i = 0, j = 0, count = 0, maxcnt = 0;
     while(i<=arr.size()&&j<=dep.size()){
-        if(arr[i]<dep[j]){
+        if(arr[i]<=dep[j]){
             count += 1;
             i++;
         }
