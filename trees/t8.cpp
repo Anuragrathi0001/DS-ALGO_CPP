@@ -1,0 +1,29 @@
+//iterative preorder
+#include<bits/stdc++.h>
+using namespace std;
+struct node{
+    int data;
+    node *left;
+    node *right;
+    node(int data1){
+        data = data1;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+ int maxh(node* root){
+    if(root==nullptr){
+        return 0 ;
+    }
+   return 1 + max(maxh(root->left), maxh(root->right));
+ }
+int main(){
+    node *root = new node(1);
+    root->left = new node(2);
+    root->right = new node(3);
+    root->left->left = new node(4);
+    root->left->right = new node(5);
+    root->right->left = new node(6);
+    cout<<maxh(root);
+    return 0;
+}
