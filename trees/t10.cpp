@@ -14,8 +14,8 @@ int calmaxpsum(node*root,int &maxsum){
     if(root==nullptr){
         return 0;
     }
-    int lh = calmaxpsum(root->left, maxsum);
-    int rh = calmaxpsum(root->right, maxsum);
+    int lh = max(0,calmaxpsum(root->left, maxsum));
+    int rh = max(0,calmaxpsum(root->right, maxsum));
     maxsum = max(maxsum,root->data+lh + rh);
     return root->data + max(lh, rh);
 }
