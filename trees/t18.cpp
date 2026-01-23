@@ -20,6 +20,7 @@ void flatten(node*root){
     flatten(root->left);
     root->right = prev;
     root->left = nullptr;
+    
     prev = root;
 }
 
