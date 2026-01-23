@@ -19,8 +19,7 @@ void flatten(node*root){
     flatten(root->right);
     flatten(root->left);
     root->right = prev;
-    root->left = nullptr;
-    
+    root->left = NULL;
     prev = root;
 }
 
