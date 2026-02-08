@@ -14,6 +14,7 @@ int findenclaves(vector<vector<int>>&mat,vector<vector<int>>&vis,int numrows,int
         //last row
         if(mat[numrows-1][i]==1&&!vis[0][numrows-1]){
             q.push({numrows-1, i});
+            
             vis[numrows-1][i] = 1;
         }        
     }
