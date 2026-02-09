@@ -42,6 +42,7 @@ int main() {
         {4},    // 3 -> 4
         {5},    // 4 -> 5
         {}      // 5
+        
     };
 
     vector<int> ans = toposort(V, adj);
