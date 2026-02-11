@@ -29,6 +29,7 @@ vector<int>findsafenode(int v,vector<vector<int>>adj){
             }
         }
     }
+    
     sort(ans.begin(), ans.end());
     return ans;
 }
