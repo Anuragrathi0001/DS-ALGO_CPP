@@ -31,13 +31,14 @@ vector<int>findmincost(int v,int e,vector<vector<int>>edges){
  while(!st.empty()){
     int node=st.top();
     st.pop();
+    if(dist[node] != 1e9) {
     for(auto it:adj[node]){
         int u=it.first;
         int wt = it.second;
         if(dist[node]+wt<dist[u]){
             dist[u] = dist[node] + wt;
         }
-    }
+    }}
  }
  return dist;
 }
