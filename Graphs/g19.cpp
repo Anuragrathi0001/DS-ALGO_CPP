@@ -48,6 +48,7 @@ int findminefforts(vector<vector<int>>& heights,
                 }
             }
         }
+        
     }
 
     return -1;  // if unreachable
