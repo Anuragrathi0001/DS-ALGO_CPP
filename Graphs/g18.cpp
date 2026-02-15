@@ -15,7 +15,7 @@ int finddest(vector<vector<int>>&grid, int n,int m,pair<int,int>source,pair<int,
         q.pop();
         for (int i = 0; i < 4; i++)
         {
-            if (xc + delrow[i] >= 0 &&xc + delrow[i]<n&&yc+delcol[i]>=0&&yc+delcol[i]<m && grid[xc+delrow[i]][yc+delcol[i]]){
+            if (xc + delrow[i] >= 0 &&xc + delrow[i]<n&&yc+delcol[i]>=0&&yc+delcol[i]<m && grid[xc+delrow[i]][yc+delcol[i]]&&dist[xc+delrow[i]][yc+delcol[i]] > distance + 1){
                 dist[xc + delrow[i]][yc + delcol[i]] = distance + 1;
                 if(destination.first==xc+delrow[i]&&destination.second==yc+delcol[i]){
                     return distance + 1;
