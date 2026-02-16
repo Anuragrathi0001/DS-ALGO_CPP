@@ -21,6 +21,7 @@ int flightswithkstops(int n, vector<vector<int>> flights,int src,int dst,int k){
             for(auto iter:adj[node]){
                 int adjNode = iter.first;
                 int edgw = iter.second;
+                
                 if(cost+edgw<dist[adjNode]&&stops<=k){
                     dist[adjNode] = cost + edgw;
                     q.push({stops + 1, {adjNode, cost + edgw}});
