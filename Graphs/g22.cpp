@@ -21,6 +21,7 @@ for(auto it:edges){
     if(dist[u]!=1e8&&dist[u]+wt<dist[v]){
         return {-1};
     }
+    
 }
 return dist;
 }
