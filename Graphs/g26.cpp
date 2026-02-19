@@ -87,6 +87,7 @@ int main(){
     {3,4,2},
     {4,5,6}
 };
+
    cout<<spanningTree(edges, v);
 
     return 0;
