@@ -11,6 +11,7 @@ class disjointSet{
         }
     }
     int findUPar(int node){
+        
         if(node=parent[node]){
             return node;
         }
