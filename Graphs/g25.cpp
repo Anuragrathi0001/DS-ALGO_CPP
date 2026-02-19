@@ -11,8 +11,8 @@ class disjointSet{
         }
     }
     int findUPar(int node){
-        
-        if(node=parent[node]){
+
+        if(node==parent[node]){
             return node;
         }
         return parent[node] = findUPar(parent[node]);
@@ -42,7 +42,7 @@ int main(){
     ds.unionByRank(4, 5);
     ds.unionByRank(6, 7);
     ds.unionByRank(5, 6);
-    if(ds.findUPar(3)==ds.findUPar(7)){
+    if(ds.findUPar(3)==ds.findUPar(2)){
         cout << "same";
     }
     else{
