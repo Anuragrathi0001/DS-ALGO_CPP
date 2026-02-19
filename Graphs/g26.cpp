@@ -51,7 +51,43 @@ void UnionBySize(int u,int v){
     }
 }
 };
+int spanningTree(vector<vector<int>>& edges, int v){
+
+    // Sort edges based on weight
+    sort(edges.begin(), edges.end(),
+        [](vector<int>& a, vector<int>& b){
+            return a[2] < b[2];
+        });
+
+    disjointSet ds(v);
+    int mstwt = 0;
+
+    for(auto &it : edges){
+        int u = it[0];
+        int v = it[1];
+        int wt = it[2];
+
+        if(ds.findUPar(u) != ds.findUPar(v)){
+            mstwt += wt;
+            ds.unionByRank(u, v);
+        }
+    }
+
+    return mstwt;
+}
+
 int main(){
+    int v = 6;
+    vector<vector<int>> edges = {
+    {0,1,4},
+    {0,2,3},
+    {1,2,1},
+    {1,3,2},
+    {2,3,4},
+    {3,4,2},
+    {4,5,6}
+};
+   cout<<spanningTree(edges, v);
 
     return 0;
 }
