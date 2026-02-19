@@ -4,7 +4,7 @@ int findwt(vector<vector<pair<int,int>>>adj,int n){
 priority_queue<
     pair<int,int>,
     vector<pair<int,int>>,
-    greater<pair<int,int>>
+    greater<pair<int,int>> 
 > pq;
     vector<int> vis(n, 0);
     pq.push({0, 0});
