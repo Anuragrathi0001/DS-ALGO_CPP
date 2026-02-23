@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 class disjointSet{
-   
     public: vector<int> rank, parent,Size;
     disjointSet(int n){
         Size.resize(n + 1, 1);
