@@ -12,6 +12,7 @@ int numWaya(int n){
     return l + r;
 }
 int main(){
+    
     int n = 3;
     cout<<numWaya(n);
 }
