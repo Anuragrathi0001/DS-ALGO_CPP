@@ -13,6 +13,7 @@ int numWaya(int n){
 }
 int main(){
     //fidh
+    //hgu
     int n = 3;
     cout<<numWaya(n);
 }
