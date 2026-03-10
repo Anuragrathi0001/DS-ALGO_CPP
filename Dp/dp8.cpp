@@ -2,7 +2,7 @@
 using namespace std;
 int funk(int ind,vector<int>&arr,vector<int>&dp){
     for (int i = 1; i < ind;i++){
-        int take = arr[ind];
+        int take = arr[i];
         if(i>1){
             take += dp[i - 2];
         }
