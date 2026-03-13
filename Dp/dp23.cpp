@@ -18,7 +18,6 @@ int f(int i,int j,vector<vector<int>>matrix,vector<vector<int>>dp){
 int main(){
     vector<vector<int>> matrix = {
     {10, 2, 3, 4},
-    
     {3, 7, 1, 6},
     {8, 5, 9, 3},
     {4, 6, 2, 8}
