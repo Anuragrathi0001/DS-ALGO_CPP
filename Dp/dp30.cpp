@@ -24,8 +24,10 @@ int longestCommonSubsequence(string text1, string text2) {
 }
 
 int main() {
+
     string s1 = "abcde";
     string s2 = "ace";
+    
 
     cout << "Length of LCS: " << longestCommonSubsequence(s1, s2);
     return 0;
